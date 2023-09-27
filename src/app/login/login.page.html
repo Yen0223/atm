@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            ĐĂNG NHẬP
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card-header>
+        <ion-card-title class="textCenter">Hệ thống ATM</ion-card-title>
+    </ion-card-header>
+
+        <form [formGroup]="userForm" (ngSubmit)="login()">
+            <ion-list class="ion-padding form-login ion-margin-top">
+                <ion-item class="" lines="none">
+                    <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+                    <ion-label position="stacked">E-mail (*)</ion-label>
+                    <ion-input clearInput="clearInput" placeholder="E-mail" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" formControlName="email" color="primary" type="email" autofocus="true"></ion-input>
+                </ion-item>
+
+                <ion-item class="" lines="none">
+                    <ion-icon slot="start" name="key"></ion-icon>
+                    <ion-label position="stacked">Mật khẩu (*)</ion-label>
+                    <ion-input clearInput="clearInput" placeholder="Mật khẩu" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" formControlName="password" color="primary" type="password"></ion-input>
+                </ion-item>
+            
+                <ion-item lines="none">
+
+                  <ion-button expand="solid" (click)="login()">Đăng nhập</ion-button>
+                  <ion-button expand="solid" (click)="add()">Thêm</ion-button>
+                  <ion-button expand="solid" (click)="delete()">Xóa</ion-button>
+                  <ion-button expand="solid" (click)="viewAll()">Xem tất cả</ion-button>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-content>
+
+    <!-- <ion-card>
+    
+        <ion-item>
+          <ion-label position="floating">Email Address</ion-label>
+          <ion-input
+            type="email"
+            [(ngModel)]="email"
+            placeholder="Yourname@gmail.com"
+          ></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">Mật khẩu</ion-label>
+          <ion-input
+            type="password"
+            [(ngModel)]="password"
+            (keyup.enter)="login()"
+            placeholder="****"
+          ></ion-input>
+        </ion-item>
+      </ion-card> -->
+
+    
